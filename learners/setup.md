@@ -2,33 +2,33 @@
 title: Setup
 ---
 
-## Local setup
+## Running on OnDemand
 
-Follow these instructions to install the required software on your computer.
-
-- [Download and install the latest version of R](https://www.r-project.org/).
-- [Download and install RStudio](https://www.rstudio.com/products/rstudio/download/#download). RStudio is an application (an integrated development environment or IDE) that facilitates the use of R and offers a number of nice additional features. You will need the free Desktop version for your computer.
-- [Download and install Quarto](https://quarto.org/docs/download/). Quarto is a program for authoring documents in a variety of formats using code. It is used in this workshop to generate a dynamic report.
-- Install the necessary R packages with the following command:
+1. Go to https://ondemand.hpc.wehi.edu.au
+2. Click RStudio Latest
+3. Use `4.2.3` as the R version
+4. In the "Additional Modules" box, add `quarto/1.1.189 pandoc/2.3.1 cmake/3.25.1`
+5. Set the "Runtime hours" to 5
+6. Set the CPUs to 4
+7. Set the memory to 10 GB
+8. In the console, paste in the following command to install the package dependencies:
 
 ```r
 install.packages(
   c(
     "conflicted",
-    "future.callr",
-    "future",
     "palmerpenguins",
     "quarto",
     "tarchetypes",
     "targets",
     "tidyverse",
-    "visNetwork"
+    "visNetwork",
+    "crew",
+    "crew.cluster"
   )
 )
 ```
 
-## Alternative: In the cloud
-
-There is a [Posit Cloud](https://posit.cloud/) instance with RStudio and all necessary packages pre-installed available, so you don't need to install anything on your own computer. You may need to create an account (free).
-
-Click this link to open: <https://posit.cloud/content/6064275>
+Having installation problems?
+Make sure Global Options → Python → "Automatically activate project-local Python environments" is unchecked!
+![](fig/python-envs.png)
