@@ -383,7 +383,7 @@ tar_plan(
 ::: hint
 You will need to define two different crew controllers.
 Also, [you will need to request a GPU from Slurm](https://slurm.schedmd.com/gres.html#Running_Jobs).
-You can find an example of this above.
+You can find the `SBATCH` flags to use for this purpose at WEHI [**here**](https://wehieduau.sharepoint.com/sites/rc2/SitePages/GPUs-on-Milton.aspx#using-gpus).
 :::
 ::: solution
 ```{R}
